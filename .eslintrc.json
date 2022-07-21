@@ -1,3 +1,33 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": ["next/core-web-vitals", "plugin:prettier/recommended"],
+  "plugins": ["simple-import-sort", "testing-library"],
+  "rules": {
+    "prettier/prettier": "error",
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error",
+    "import/no-unresolved": "error"
+  },
+  "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
+    "import/resolver": {
+      "typescript": {
+        "project": "."
+      }
+    }
+  },
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "overrides": [
+    // Only uses Testing Library lint rules in test files
+    {
+      "files": [
+        "**/__tests__/**/*.[jt]s?(x)",
+        "**/?(*.)+(spec|test).[jt]s?(x)"
+      ],
+      "extends": ["plugin:jest/recommended", "plugin:testing-library/react"]
+    }
+  ]
 }
