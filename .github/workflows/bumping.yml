@@ -1,0 +1,18 @@
+name: Bumping
+on:
+  workflow_run:
+    workflows: ['Testing']
+    branches: [main]
+    types:
+      - completed
+jobs:
+  validation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Configure committer
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+      - name: Bump version
+        uses: qzb/standard-version@v1.0.5

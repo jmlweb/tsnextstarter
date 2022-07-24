@@ -21,6 +21,7 @@ To be opinionated on the tooling, but not on the code
   - [commitizen](https://github.com/commitizen/cz-cli) integration
   - [changelog generation](https://github.com/absolute-version/commit-and-tag-version)
 - runs linting for code and commit message [on each commit](https://github.com/typicode/husky)
+- [github actions](https://github.com/features/actions) integration for linting and testing
 
 ### What's not included?
 
