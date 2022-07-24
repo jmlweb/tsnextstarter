@@ -6,7 +6,7 @@ on:
     types:
       - completed
 jobs:
-  validation:
+  bump:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -15,4 +15,4 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
       - name: Bump version
-        uses: qzb/standard-version@v1.0.5
+        uses: qzb/standard-version-action@v1.0.5
