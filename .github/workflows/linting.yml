@@ -1,0 +1,36 @@
+name: Linting
+on:
+  push:
+    branches: [main]
+    # Remove the line above to run when pushing to master
+  pull_request:
+    branches: [main]
+jobs:
+  validation:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Begin linting
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Use Node 16
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16.x
+
+      - name: Use cached node_modules
+        uses: actions/cache@v2
+        with:
+          path: node_modules
+          key: nodeModules-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            nodeModules-
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Run Type Checking
+        run: yarn check-types
+
+      - name: Run linting
+        run: yarn lint
