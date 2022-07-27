@@ -1,6 +1,12 @@
 # Changelog
 
-All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
+
+### [0.1.5](https://github.com/jmlweb/tsnextstarter/compare/v0.1.4...v0.1.5) (2022-07-27)
+
+### Bug Fixes
+
+- commit msg hook ([22d0e9a](https://github.com/jmlweb/tsnextstarter/commit/22d0e9ade67221315ce6dd2d6da886477b71c041))
 
 ### 0.1.4 (2022-07-24)
 
