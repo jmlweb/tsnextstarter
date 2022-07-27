@@ -1,6 +1,7 @@
 import { FC } from 'react';
 
-import Card, { CardProps } from './Card';
+import Card, { CardProps } from '@/components/Card';
+
 import styles from './Cards.module.css';
 
 interface CardsProps {
@@ -8,9 +9,9 @@ interface CardsProps {
 }
 
 const Cards: FC<CardsProps> = ({ items }) => (
-  <div className={styles.wrapper}>
-    {items.map((cardProps) => (
-      <Card key={cardProps.title} {...cardProps} />
+  <div className={styles.wrapper} data-testid="cards">
+    {items.map(({ title, excerpt, href }) => (
+      <Card key={title} title={title} excerpt={excerpt} href={href} />
     ))}
   </div>
 );

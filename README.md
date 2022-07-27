@@ -11,6 +11,7 @@ To be opinionated on the tooling, but not on the code
 - [TypeScript](https://www.typescriptlang.org/) support
 - [Jest](https://jestjs.io/) and [Testing Library](https://testing-library.com/docs/react-testing-library/intro/) (provided by [@swc/jest](https://swc.rs/docs/usage/jest) for better performance)
 - [Mock for http req and res](https://github.com/howardabrams/node-mocks-http)
+- Two [layouts](https://nextjs.org/docs/basic-features/layouts) ready to be used: One common for all pages and one empty.
 - [prettier](https://prettier.io/)
 - [eslint](https://eslint.org/)
   - prettier integration
@@ -45,6 +46,17 @@ To be opinionated on the tooling, but not on the code
 - `prepare`: Install husky hooks
 - `commit`: Run commitizen
 - `release`: Run changelog generation and version bumping
+
+## How are folders organized
+
+- While the configuration files live in the root folder, all the code related items are organized inside `src` (already supported by Next.js).
+- The `pages` folder is used only for routing purposes. The code is organized in `scenes` (one scene could represent different routes).
+- Each file from the `pages` folder must export by default a module living inside the `scenes` folder.
+- Optionally, it could also export (by name) any related modules used for [data-fetching and dynamic routing (`getStaticProps`, `getStaticPaths`, `getServerSideProps`...)](https://nextjs.org/docs/basic-features/data-fetching/overview).
+- Each `scene` could have many subfolders, representing types of files (`components`, `stateMachines`, `utils` or whatever you want).
+- Outside of the `scenes` folder, there may be also other folders, representing types of files (`components`, `stateMachines`, `utils` or whatever you want) which are common to different `scenes`.
+- There is a special folder called `apiHandlers`, to put those handlers along with tests, utils, types or any other auxiliary files.
+- By moving the "real code" outside of the `pages` folder, it is possible to place the unit tests along with the code, while the integration tests can be located inside the `__tests__` folder placed in the root.
 
 ## F.A.Q.
 
