@@ -5,14 +5,23 @@ on:
     branches: [main]
     types:
       - completed
+env:
+  GH_TOKEN: ${{ secrets.GH_TOKEN }}
 jobs:
   bump:
     runs-on: ubuntu-latest
     steps:
+      - name: 🔍 GH_TOKEN
+        if: env.GH_TOKEN == ''
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: echo "GH_TOKEN=${GITHUB_TOKEN}" >> $GITHUB_ENV
       - name: Checkout source code
         uses: actions/checkout@v3
         with:
+          fetch-depth: 0
           ref: ${{ github.ref }}
+          token: ${{ env.GH_TOKEN }}
       - name: Configure committer
         run: |
           git config user.name github-actions
@@ -21,4 +30,8 @@ jobs:
         uses: qzb/standard-version-action@v1.0.5
       - name: Push
         run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add . --all
+          git commit -m "chore: update changelog with ${GITHUB_REF#refs/*/}"
           git push --follow-tags
