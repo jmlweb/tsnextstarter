@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import styles from './Cards.module.css';
+import styles from './Card.module.css';
 
 export interface CardProps {
   title: string;
@@ -9,9 +9,9 @@ export interface CardProps {
 }
 
 const Card: FC<CardProps> = ({ title, href, excerpt }) => (
-  <a href={href} className={styles.card}>
-    <h2 className={styles.cardTitle}>{title} &rarr;</h2>
-    <p className={styles.cardExcerpt}>{excerpt}</p>
+  <a href={href} className={styles.wrapper}>
+    <h2 className={styles.title}>{title} &rarr;</h2>
+    <p className={styles.excerpt}>{excerpt}</p>
   </a>
 );
 
