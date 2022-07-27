@@ -16,12 +16,15 @@ To be opinionated on the tooling, but not on the code
   - prettier integration
   - [automatic import sorting](https://github.com/lydell/eslint-plugin-simple-import-sort)
   - [Testing library integration](https://github.com/testing-library/eslint-plugin-testing-library)
-- conventional commits integration:
+- [conventional commits](https://www.conventionalcommits.org/) integration:
   - [linting](https://github.com/conventional-changelog/commitlint)
   - [commitizen](https://github.com/commitizen/cz-cli) integration
   - [changelog generation](https://github.com/absolute-version/commit-and-tag-version)
 - runs linting for code and commit message [on each commit](https://github.com/typicode/husky)
-- [github actions](https://github.com/features/actions) integration for linting and testing
+- [github actions](https://github.com/features/actions):
+  - linting
+  - testing & building
+  - package.json & tag version bumping (based on semantic commits)
 
 ### What's not included?
 
@@ -42,3 +45,20 @@ To be opinionated on the tooling, but not on the code
 - `prepare`: Install husky hooks
 - `commit`: Run commitizen
 - `release`: Run changelog generation and version bumping
+
+## F.A.Q.
+
+### Shall I use the version bumping manually or with the action provided
+
+#### If you are using already github actions
+
+- If are comfortable with the workflow, just remember not to run the `release` command manually
+- If you prefer to bump manually, delete the `bumping.yml` file inside `.github/workflows` folder. Whenenver you want to do the bumping, run the `release` script and push your files and tags.
+
+#### If you are not using github actions
+
+You can safely delete the `.github` folder or just forget about its existence as it won't harm your project.
+
+### How to integrate X feature in my project?
+
+Please, refer to the official [Next.js documentation](https://nextjs.org/docs)
