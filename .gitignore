@@ -39,3 +39,6 @@ yarn-error.log*
 
 #swc
 .swc
+
+#storybook
+storybook-static

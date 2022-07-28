@@ -12,6 +12,7 @@ To be opinionated on the tooling, but not on the code
 - [Jest](https://jestjs.io/) and [Testing Library](https://testing-library.com/docs/react-testing-library/intro/) (provided by [@swc/jest](https://swc.rs/docs/usage/jest) for better performance)
 - [Mock for http req and res](https://github.com/howardabrams/node-mocks-http)
 - Two [layouts](https://nextjs.org/docs/basic-features/layouts) ready to be used: One common for all pages and one empty.
+- [Storybook](https://storybook.js.org/)
 - [prettier](https://prettier.io/)
 - [eslint](https://eslint.org/)
   - prettier integration
@@ -46,6 +47,8 @@ To be opinionated on the tooling, but not on the code
 - `prepare`: Install husky hooks
 - `commit`: Run commitizen
 - `release`: Run changelog generation and version bumping
+- `storybook`: Run Storybook in development mode
+- `build-storybook`: Run Storybook in build mode
 
 ## How are the folders in the template organized
 
@@ -68,6 +71,7 @@ A `scene` represents a logical set of screens (or just one) from the application
 - Other files or folders which are used by the scene(s) component(s).
   - `components`
   - `utils`
+  - `*.stories.tsx`
   - ...
 
 Each `scene` can serve to different `pages`, by using different combinations of `page components` and `data-fetching functions`:
@@ -78,7 +82,7 @@ Each `scene` can serve to different `pages`, by using different combinations of 
 
 If needed, an `scene` can contain also another folders like `components`, `data`... with modules shared across the scene.
 
-If you want, you can place your unit tests at the same level than your code.
+If you want, you can place your unit tests and stories at the same level than your code.
 
 ### "src/apiHandlers"
 

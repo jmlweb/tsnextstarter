@@ -2,11 +2,11 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 
 import { CommonLayout } from '@/layouts/CommonLayout';
 
-import Home from './Home.scene';
+import HomeScene from './Home.scene';
 
 export default {
   title: 'Scenes/Home',
-  component: Home,
+  component: HomeScene,
   decorators: [
     (Story) => (
       <CommonLayout>
@@ -14,6 +14,6 @@ export default {
       </CommonLayout>
     ),
   ],
-} as ComponentMeta<typeof Home>;
+} as ComponentMeta<typeof HomeScene>;
 
-export const HomeScene: ComponentStory<typeof Home> = () => <Home />;
+export const Home: ComponentStory<typeof HomeScene> = () => <HomeScene />;
