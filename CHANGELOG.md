@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.8](https://github.com/jmlweb/tsnextstarter/compare/v0.1.7...v0.1.8) (2022-07-28)
+
+
+### Features
+
+* add some goodies for storybook ([61b2255](https://github.com/jmlweb/tsnextstarter/commit/61b22551c69eb7b2c6c11500261141b1628b1d3e))
+* basic integration with storybook ([6cd78e1](https://github.com/jmlweb/tsnextstarter/commit/6cd78e1f1723bc18d2a4a765f3e454ed8bff988c))
+
 ### [0.1.7](https://github.com/jmlweb/tsnextstarter/compare/v0.1.5...v0.1.7) (2022-07-27)
 
 ### Features
