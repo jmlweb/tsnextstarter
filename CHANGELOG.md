@@ -4,15 +4,13 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [0.1.7](https://github.com/jmlweb/tsnextstarter/compare/v0.1.5...v0.1.7) (2022-07-27)
 
-
 ### Features
 
-* improve folder organization, create more tests ([471deb3](https://github.com/jmlweb/tsnextstarter/commit/471deb38fa156c99ea8067d3295309a8b4ac84d5))
-
+- improve folder organization, create more tests ([471deb3](https://github.com/jmlweb/tsnextstarter/commit/471deb38fa156c99ea8067d3295309a8b4ac84d5))
 
 ### Bug Fixes
 
-* bumping ([ea723db](https://github.com/jmlweb/tsnextstarter/commit/ea723db316db7b99567c33ea3da74fe6bfc2cc4a))
+- bumping ([ea723db](https://github.com/jmlweb/tsnextstarter/commit/ea723db316db7b99567c33ea3da74fe6bfc2cc4a))
 
 ### 0.1.6 (2022-07-27)
 
