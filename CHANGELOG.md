@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.7](https://github.com/jmlweb/tsnextstarter/compare/v0.1.5...v0.1.7) (2022-07-27)
+
+### Features
+
+- improve folder organization, create more tests ([471deb3](https://github.com/jmlweb/tsnextstarter/commit/471deb38fa156c99ea8067d3295309a8b4ac84d5))
+
+### Bug Fixes
+
+- bumping ([ea723db](https://github.com/jmlweb/tsnextstarter/commit/ea723db316db7b99567c33ea3da74fe6bfc2cc4a))
+
 ### 0.1.6 (2022-07-27)
 
 ### [0.1.5](https://github.com/jmlweb/tsnextstarter/compare/v0.1.4...v0.1.5) (2022-07-27)
