@@ -8,11 +8,11 @@ To be opinionated on the tooling, but not on the code
 
 ### What's included
 
-- [TypeScript](https://www.typescriptlang.org/) support
+- The basic Next.js template with [TypeScript](https://www.typescriptlang.org/) support
 - [Jest](https://jestjs.io/) and [Testing Library](https://testing-library.com/docs/react-testing-library/intro/) (provided by [@swc/jest](https://swc.rs/docs/usage/jest) for better performance)
-- [Mock for http req and res](https://github.com/howardabrams/node-mocks-http)
-- Two [layouts](https://nextjs.org/docs/basic-features/layouts) ready to be used: One common for all pages and one empty.
-- [Storybook](https://storybook.js.org/)
+- [Mocking for http req and res](https://github.com/howardabrams/node-mocks-http) (useful for API handlers)
+- Two [layouts](https://nextjs.org/docs/basic-features/layouts) ready to be used: A "common" one (intended to be used as default) and an "empty" one (just in case you need a completely different look & feel for some pages)
+- [Storybook](https://storybook.js.org/) configured and integrated with Next.js
 - [prettier](https://prettier.io/)
 - [eslint](https://eslint.org/)
   - prettier integration
@@ -50,19 +50,19 @@ To be opinionated on the tooling, but not on the code
 - `storybook`: Run Storybook in development mode
 - `build-storybook`: Run Storybook in build mode
 
-## How are the folders in the template organized
+## 🔪 Directories organization
 
-### "src"
+### src
 
 For a better organization, the code is organized inside the `src` folder, while the configuration files and the `public` directory are located at the root level.
 
 [This is supported by Next.js by default](https://nextjs.org/docs/advanced-features/src-directory).
 
-### "src/pages"
+### src/pages
 
 This folder is used only for routing purposes. Every file inside the `pages` folder should not have any logic attached, but to re-export the modules (default for the Component, named for server-side data fetching functions) from the `scenes` folder.
 
-### "src/scenes"
+### src/scenes
 
 A `scene` represents a logical set of screens (or just one) from the application and is formed by:
 
@@ -84,21 +84,21 @@ If needed, an `scene` can contain also another folders like `components`, `data`
 
 If you want, you can place your unit tests and stories at the same level than your code.
 
-### "src/apiHandlers"
+### src/apiHandlers
 
 Each subfolder inside the `apiHandlers` folder contains one or more handlers (which will be later imported by the [api routes](https://nextjs.org/docs/api-routes/introduction)) and optionally the tests, utilities or any other type of auxiliary file.
 
-### "src/layouts"
+### src/layouts
 
 The layout is formed by a component, along with a function called `getLayout` which will be imported by the scene and placed in the special `getLayout` property of the scene component.
 
 [Refer to the Next.js documentation for more info about the layouts](https://nextjs.org/docs/basic-features/layouts)
 
-### "src/components", "src/data", "src/helpers", "src/utils"...
+### src/components, src/data, src/helpers, src/utils...
 
 Just use a folder at the `src` level for any kind of file which is shared by two or more `scenes`.
 
-## F.A.Q.
+## 🤷 F.A.Q.
 
 ### Shall I use the version bumping manually or with the action provided
 
