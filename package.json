@@ -14,7 +14,9 @@
     "test:coverage": "jest --coverage",
     "prepare": "husky install",
     "commit": "cz",
-    "release": "commit-and-tag-version"
+    "release": "commit-and-tag-version",
+    "storybook": "start-storybook -p 6006 -s ./public",
+    "build-storybook": "build-storybook -s public"
   },
   "browserslist": [
     ">1%",
@@ -28,8 +30,17 @@
     "react-dom": "18.2.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.18.9",
     "@commitlint/cli": "^17.0.3",
     "@commitlint/config-conventional": "^17.0.3",
+    "@storybook/addon-actions": "^6.5.9",
+    "@storybook/addon-essentials": "^6.5.9",
+    "@storybook/addon-interactions": "^6.5.9",
+    "@storybook/addon-links": "^6.5.9",
+    "@storybook/builder-webpack5": "^6.5.9",
+    "@storybook/manager-webpack5": "^6.5.9",
+    "@storybook/react": "^6.5.9",
+    "@storybook/testing-library": "^0.0.13",
     "@swc/jest": "^0.2.22",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
@@ -38,6 +49,7 @@
     "@types/node": "18.0.6",
     "@types/react": "18.0.15",
     "@types/react-dom": "18.0.6",
+    "babel-loader": "^8.2.5",
     "commit-and-tag-version": "^10.0.1",
     "cz-conventional-changelog": "3.3.0",
     "eslint": "8.20.0",
@@ -46,6 +58,7 @@
     "eslint-plugin-jest": "^26.6.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-simple-import-sort": "^7.0.0",
+    "eslint-plugin-storybook": "^0.6.1",
     "eslint-plugin-testing-library": "^5.5.1",
     "husky": ">=6",
     "jest": "^28.1.3",
