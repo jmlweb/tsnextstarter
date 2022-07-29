@@ -1,6 +1,14 @@
 # TS Next Starter
 
-This is a template for starting a [Next.js](https://nextjs.org/) project based on [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+![GitHub followers](https://img.shields.io/github/followers/jmlweb?style=social)
+![GitHub](https://img.shields.io/github/license/jmlweb/tsnextstarter)
+![GitHub Workflow Status: Testing](https://img.shields.io/github/workflow/status/jmlweb/tsnextstarter/Testing?label=testing)
+![GitHub Workflow Status: Linting](https://img.shields.io/github/workflow/status/jmlweb/tsnextstarter/Linting?label=linting)
+![GitHub last commit](https://img.shields.io/github/last-commit/jmlweb/tsnextstarter)
+![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/jmlweb/tsnextstarter)
+![GitHub Repo stars](https://img.shields.io/github/stars/jmlweb/tsnextstarter?style=social)
+
+This is a template for a [Next.js](https://nextjs.org/) project based on [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## 🧠 Philosophy
 

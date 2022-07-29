@@ -32,6 +32,17 @@
         "**/?(*.)+(spec|test).[jt]s?(x)"
       ],
       "extends": ["plugin:jest/recommended", "plugin:testing-library/react"]
+    },
+    // Only uses Cypress lint rules in test files
+    {
+      "files": [
+        "**/__tests__/**/*.[jt]s?(x)",
+        "**/cypress/**/?(*.)+(cy).[jt]s?(x)"
+      ],
+      "extends": ["plugin:cypress/recommended"],
+      "parserOptions": {
+        "project": "./cypress/tsconfig.json"
+      }
     }
   ]
 }

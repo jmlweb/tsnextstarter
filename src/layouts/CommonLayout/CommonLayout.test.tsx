@@ -1,14 +1,15 @@
 import { render, screen } from '@testing-library/react';
 
-import { CommonLayout } from './CommonLayout';
+import getLayout, { CommonLayout } from '.';
 
 describe('CommonLayout', () => {
-  test('should render properly', async () => {
-    render(
-      <CommonLayout>
-        <p>children</p>
-      </CommonLayout>,
-    );
+  test.each([
+    getLayout(<p>children</p>),
+    <CommonLayout key="common">
+      <p>children</p>
+    </CommonLayout>,
+  ])('should render properly', (comp) => {
+    render(comp);
 
     const footer = screen.getByRole('contentinfo');
     expect(footer).toHaveTextContent('Powered by');
