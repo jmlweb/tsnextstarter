@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.2.0](https://github.com/jmlweb/tsnextstarter/compare/v0.1.9...v0.2.0) (2022-07-29)
+
+
+### ⚠ BREAKING CHANGES
+
+* integrate cypress, first release
+
+### Features
+
+* integrate cypress, first release ([1b49752](https://github.com/jmlweb/tsnextstarter/commit/1b49752a87dc56c4cfd8ebfd7c9efb7aae26730e))
+
 ### [0.1.9](https://github.com/jmlweb/tsnextstarter/compare/v0.1.8...v0.1.9) (2022-07-28)
 
 ### [0.1.8](https://github.com/jmlweb/tsnextstarter/compare/v0.1.7...v0.1.8) (2022-07-28)
