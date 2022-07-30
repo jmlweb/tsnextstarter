@@ -19,13 +19,6 @@ jobs:
           node-version: 16.x
           cache: yarn
 
-      - name: Use cached node_modules
-        uses: actions/cache@v2
-        with:
-          path: node_modules
-          key: nodeModules-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            nodeModules-
       - name: Install dependencies
         run: yarn install --frozen-lockfile
 
@@ -49,13 +42,6 @@ jobs:
           node-version: 16.x
           cache: yarn
 
-      - name: Use cached node_modules
-        uses: actions/cache@v2
-        with:
-          path: node_modules
-          key: nodeModules-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            nodeModules-
       - name: Install dependencies
         run: yarn install --frozen-lockfile
 
@@ -86,15 +72,8 @@ jobs:
           node-version: 16.x
           cache: yarn
 
-      - name: Use cached node_modules
-        uses: actions/cache@v2
-        with:
-          path: node_modules
-          key: nodeModules-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            nodeModules-
       - name: Install dependencies
         run: yarn install --frozen-lockfile
 
       - name: Build project
-        run: yarn test:coverage
+        run: yarn build
