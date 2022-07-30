@@ -27,7 +27,7 @@ jobs:
           restore-keys: |
             nodeModules-
       - name: Install dependencies
-        run: CYPRESS_CACHE_FOLDER=./tmp/Cypress yarn install --frozen-lockfile
+        run: CYPRESS_CACHE_FOLDER=~/.cache/Cypress yarn install --frozen-lockfile
 
       - name: Build project
         run: yarn test:coverage
