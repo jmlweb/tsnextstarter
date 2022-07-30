@@ -12,16 +12,16 @@ This is a template for a [Next.js](https://nextjs.org/) project based on [`creat
 
 ## 🧠 Philosophy
 
-To be opinionated on the tooling, but not on the code
+To be opinionated on the tools, but not on the code
 
 ### What's included
 
 - The basic Next.js template with [TypeScript](https://www.typescriptlang.org/) support
 - [Jest](https://jestjs.io/) and [Testing Library](https://testing-library.com/docs/react-testing-library/intro/) (provided by [@swc/jest](https://swc.rs/docs/usage/jest) for better performance)
 - [Mocking for http req and res](https://github.com/howardabrams/node-mocks-http) (useful for API handlers)
-- Two [layouts](https://nextjs.org/docs/basic-features/layouts) ready to be used: A "common" one (intended to be used as default) and an "empty" one (just in case you need a completely different look & feel for some pages)
+- Two [layouts](https://nextjs.org/docs/basic-features/layouts) are ready to be used: A "common" one (intended to be used as default) and an "empty" one (just in case you need a completely different look & feel for some pages)
 - [Storybook](https://storybook.js.org/) configured and integrated with Next.js
-- [Cypress](https://www.cypress.io/) already configured for Next.js and integrated with github actions
+- [Cypress](https://www.cypress.io/) is already configured for Next.js and integrated with GitHub actions
 - [prettier](https://prettier.io/)
 - [eslint](https://eslint.org/)
   - prettier integration
@@ -32,7 +32,7 @@ To be opinionated on the tooling, but not on the code
   - [commitizen](https://github.com/commitizen/cz-cli) integration
   - [changelog generation](https://github.com/absolute-version/commit-and-tag-version)
 - runs linting for code and commit message [on each commit](https://github.com/typicode/husky)
-- [github actions](https://github.com/features/actions):
+- [GitHub actions](https://github.com/features/actions):
   - linting
   - testing & building
   - package.json & tag version bumping (based on semantic commits)
@@ -69,7 +69,7 @@ For a better organization, the code is organized inside the `src` folder, while 
 
 ### src/pages
 
-This folder is used only for routing purposes. Every file inside the `pages` folder should not have any logic attached, but to re-export the modules (default for the Component, named for server-side data fetching functions) from the `scenes` folder.
+This folder is used only for routing purposes. Every file inside the `pages` folder should not have any logic attached but to re-export the modules (default for the Component, named for server-side data fetching functions) from the `scenes` folder.
 
 ### src/scenes
 
@@ -85,17 +85,17 @@ A `scene` represents a logical set of screens (or just one) from the application
 
 Each `scene` can serve to different `pages`, by using different combinations of `page components` and `data-fetching functions`:
 
-- An `scene` could export two different components (or "subscenes"), along with the same `getStaticProps` function.
-- The two components represent the same information and use internally most of the same sub-components, while maintaining a completely different layout (including subtle variations on the sub-components).
+- A `scene` could export two different components (or "sub-scenes"), along with the same `getStaticProps` function.
+- The two components represent the same information and use internally most of the same sub-components while maintaining a completely different layout (including subtle variations on the sub-components).
 - The route "/items/layout-a" could point to one of the components, while "/items/layout-b" could point to the other one.
 
-If needed, an `scene` can contain also another folders like `components`, `data`... with modules shared across the scene.
+If needed, a `scene` can contain also other folders like `components`, and `data`... with modules shared across the scene.
 
-If you want, you can place your unit tests and stories at the same level than your code.
+If you want, you can place your unit tests and stories at the same level as your code.
 
 ### src/apiHandlers
 
-Each subfolder inside the `apiHandlers` folder contains one or more handlers (which will be later imported by the [api routes](https://nextjs.org/docs/api-routes/introduction)) and optionally the tests, utilities or any other type of auxiliary file.
+Each subfolder inside the `apiHandlers` folder contains one or more handlers (which will be later imported by the [api routes](https://nextjs.org/docs/api-routes/introduction)) and optionally the tests, utilities, or any other type of auxiliary file.
 
 ### src/layouts
 
@@ -111,15 +111,15 @@ Just use a folder at the `src` level for any kind of file which is shared by two
 
 ### Shall I use the version bumping manually or with the action provided
 
-#### If you are using already github actions
+#### If you are using already GitHub actions
 
 - If are comfortable with the workflow, just remember not to run the `release` command manually
-- If you prefer to bump manually, delete the `bumping.yml` file inside `.github/workflows` folder. Whenenver you want to do the bumping, run the `release` script and push your files and tags.
+- If you prefer to bump manually, delete the `bumping.yml` file inside `.github/workflows` folder. Whenever you want to do the bumping, run the `release` script and push your files and tags.
 
-#### If you are not using github actions
+#### If you are not using GitHub actions
 
 You can safely delete the `.github` folder or just forget about its existence as it won't harm your project.
 
-### How to integrate X feature in my project?
+### How to integrate X feature/technology into my project?
 
 Please, refer to the official [Next.js documentation](https://nextjs.org/docs)
