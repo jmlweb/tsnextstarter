@@ -7,7 +7,11 @@
 [![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/josemanuel.lucas)
 [![Twitter](https://img.shields.io/badge/Twitter-%231DA1F2.svg?style=for-the-badge&logo=Twitter&logoColor=white)](https://twitter.com/jmlweb)
 
-<h1 align="center">TSNextStarter</h1>
+<h1 align="center">
+
+![TS Next Starter](https://repository-images.githubusercontent.com/517446374/3f7edb66-baed-443f-8341-ab34e9191c2f)
+
+</h1>
 
 <p align="center">
   This is a template for a <a href="https://nextjs.org/">Next.js</a> project based on <a href="https://github.com/vercel/next.js/tree/canary/packages/create-next-app">create-next-app</a>
@@ -33,7 +37,8 @@ pnpm create next-app -e https://github.com/jmlweb/tsnextstarter
 
 ## 🧠 Philosophy
 
-To be opinionated on the tools, but not on the code
+- To be opinionated on the tools, but not on the code
+- To help implementing a scalable, module-based directory organization
 
 ### What's included
 
