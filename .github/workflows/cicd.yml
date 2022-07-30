@@ -57,6 +57,8 @@ jobs:
           fetch-depth: 0
       - name: Cypress run
         uses: cypress-io/github-action@v4
+        with:
+          start: yarn dev
 
   building:
     runs-on: ubuntu-latest
