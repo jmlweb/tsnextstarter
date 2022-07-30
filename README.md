@@ -21,6 +21,7 @@ To be opinionated on the tooling, but not on the code
 - [Mocking for http req and res](https://github.com/howardabrams/node-mocks-http) (useful for API handlers)
 - Two [layouts](https://nextjs.org/docs/basic-features/layouts) ready to be used: A "common" one (intended to be used as default) and an "empty" one (just in case you need a completely different look & feel for some pages)
 - [Storybook](https://storybook.js.org/) configured and integrated with Next.js
+- [Cypress](https://www.cypress.io/) already configured for Next.js and integrated with github actions
 - [prettier](https://prettier.io/)
 - [eslint](https://eslint.org/)
   - prettier integration
