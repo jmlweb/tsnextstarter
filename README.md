@@ -19,9 +19,11 @@
 
 <hr />
 
-## Quickstart
+## ⚡ Quickstart
 
-```
+You can click on the button **Use this template** or start a new project with create-next-app
+
+```bash
 npx create-next-app -e https://github.com/jmlweb/tsnextstarter
 #or
 yarn create next-app -e https://github.com/jmlweb/tsnextstarter
@@ -95,11 +97,11 @@ For a better organization, the code is organized inside the `src` folder, while 
 
 [This is supported by Next.js by default](https://nextjs.org/docs/advanced-features/src-directory).
 
-### src/pages
+#### src/pages
 
 This folder is used only for routing purposes. Every file inside the `pages` folder should not have any logic attached but to re-export the modules (default for the Component, named for server-side data fetching functions) from the `scenes` folder.
 
-### src/scenes
+#### src/scenes
 
 A `scene` represents a logical set of screens (or just one) from the application and is formed by:
 
@@ -121,19 +123,35 @@ If needed, a `scene` can contain also other folders like `components`, and `data
 
 If you want, you can place your unit tests and stories at the same level as your code.
 
-### src/apiHandlers
+#### src/apiHandlers
 
 Each subfolder inside the `apiHandlers` folder contains one or more handlers (which will be later imported by the [api routes](https://nextjs.org/docs/api-routes/introduction)) and optionally the tests, utilities, or any other type of auxiliary file.
 
-### src/layouts
+#### src/layouts
 
 The layout is formed by a component, along with a function called `getLayout` which will be imported by the scene and placed in the special `getLayout` property of the scene component.
 
 [Refer to the Next.js documentation for more info about the layouts](https://nextjs.org/docs/basic-features/layouts)
 
-### src/components, src/data, src/helpers, src/utils...
+#### src/components, src/data, src/helpers, src/utils...
 
 Just use a folder at the `src` level for any kind of file which is shared by two or more `scenes`.
+
+### **test**
+
+You can use this directory for your integration tests with Jest
+
+### cypress
+
+e2e (and/or integration) tests and fixtures for Cypress
+
+### .storybook
+
+Configuration files for Storybook
+
+### .github/workflows
+
+CI/CD and bumping workflows for GitHub Actions
 
 ## 🤷 F.A.Q.
 
