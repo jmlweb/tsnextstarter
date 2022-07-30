@@ -1,0 +1,91 @@
+name: CI/CD
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize, reopened]
+
+jobs:
+  linting:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Use Node 16
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16.x
+          cache: yarn
+
+      - name: Use cached node_modules
+        uses: actions/cache@v2
+        with:
+          path: node_modules
+          key: nodeModules-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            nodeModules-
+      - name: Install dependencies
+        run: CYPRESS_CACHE_FOLDER=/home/runner/.cache/Cypress yarn install --frozen-lockfile
+
+      - name: Run Type Checking
+        run: yarn check-types
+
+      - name: Run linting
+        run: yarn lint
+  testing:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Use Node 16
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16.x
+          cache: yarn
+
+      - name: Use cached node_modules
+        uses: actions/cache@v2
+        with:
+          path: node_modules
+          key: nodeModules-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            nodeModules-
+      - name: Install dependencies
+        run: CYPRESS_CACHE_FOLDER=/home/runner/.cache/Cypress yarn install --frozen-lockfile
+
+      - name: Run jest tests
+        run: yarn test:coverage
+
+      - name: Run cypress tests
+        run: yarn e2e:run
+  building:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Use Node 16
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16.x
+          cache: yarn
+
+      - name: Use cached node_modules
+        uses: actions/cache@v2
+        with:
+          path: node_modules
+          key: nodeModules-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            nodeModules-
+      - name: Install dependencies
+        run: CYPRESS_CACHE_FOLDER=/home/runner/.cache/Cypress yarn install --frozen-lockfile
+
+      - name: Build project
+        run: yarn test:coverage

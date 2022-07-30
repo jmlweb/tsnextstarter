@@ -1,7 +1,7 @@
 name: Bumping
 on:
   workflow_run:
-    workflows: ['Testing']
+    workflows: ['CI/CD']
     branches: [main]
     types:
       - completed
