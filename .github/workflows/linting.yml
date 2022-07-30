@@ -27,7 +27,7 @@ jobs:
           restore-keys: |
             nodeModules-
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: CYPRESS_CACHE_FOLDER=./tmp/Cypress yarn install --frozen-lockfile
 
       - name: Run Type Checking
         run: yarn check-types
