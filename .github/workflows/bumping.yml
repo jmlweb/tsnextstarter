@@ -27,7 +27,7 @@ jobs:
           git config user.name github-actions
           git config user.email github-actions@github.com
       - name: Bump version
-        uses: qzb/standard-version-action@v1.0.5
+        uses: qzb/standard-version-action@v1.0.7
       - name: Push
         run: |
           git push --follow-tags
