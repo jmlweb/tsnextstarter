@@ -14,7 +14,7 @@ jobs:
           fetch-depth: 0
 
       - name: Use Node 16
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
         with:
           node-version: 16.x
           cache: yarn
@@ -27,7 +27,7 @@ jobs:
           restore-keys: |
             nodeModules-
       - name: Install dependencies
-        run: CYPRESS_CACHE_FOLDER=/home/runner/.cache/Cypress yarn install --frozen-lockfile
+        run: yarn install --frozen-lockfile
 
       - name: Run Type Checking
         run: yarn check-types
@@ -44,7 +44,7 @@ jobs:
           fetch-depth: 0
 
       - name: Use Node 16
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
         with:
           node-version: 16.x
           cache: yarn
@@ -57,7 +57,7 @@ jobs:
           restore-keys: |
             nodeModules-
       - name: Install dependencies
-        run: CYPRESS_CACHE_FOLDER=/home/runner/.cache/Cypress yarn install --frozen-lockfile
+        run: yarn install --frozen-lockfile
 
       - name: Run jest tests
         run: yarn test:coverage
@@ -81,7 +81,7 @@ jobs:
           fetch-depth: 0
 
       - name: Use Node 16
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
         with:
           node-version: 16.x
           cache: yarn
@@ -94,7 +94,7 @@ jobs:
           restore-keys: |
             nodeModules-
       - name: Install dependencies
-        run: CYPRESS_CACHE_FOLDER=/home/runner/.cache/Cypress yarn install --frozen-lockfile
+        run: yarn install --frozen-lockfile
 
       - name: Build project
         run: yarn test:coverage
