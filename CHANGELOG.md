@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.1](https://github.com/jmlweb/tsnextstarter/compare/v0.2.0...v0.2.1) (2022-07-30)
+
+
+### Features
+
+* include cypress and separate building in workflows ([a123adc](https://github.com/jmlweb/tsnextstarter/commit/a123adc578113213e6bf97f65d71bdf80020ae47))
+* move building step to cypress action ([bdde127](https://github.com/jmlweb/tsnextstarter/commit/bdde1272cc5e3aa305b751c118b1428c92053ee5))
+* move to a single file for cicd workflow ([6382542](https://github.com/jmlweb/tsnextstarter/commit/638254241094dd8220965664ce170a6a08a8c613))
+
+
+### Bug Fixes
+
+* bumping action triggering ([1d6349d](https://github.com/jmlweb/tsnextstarter/commit/1d6349d61abc9ef9ddae59dcbe2240ed04212ed1))
+* cypress action ([51b9322](https://github.com/jmlweb/tsnextstarter/commit/51b93227255823a219be518c15b6d00c440d867c))
+* cypress action ([357e52d](https://github.com/jmlweb/tsnextstarter/commit/357e52d13dbdbdcadc67380545fc35866a074d76))
+* cypress cache directory ([bc15821](https://github.com/jmlweb/tsnextstarter/commit/bc1582117df5cb3f28ab719b9ad595405f00ebac))
+* cypress cache directory ([7db060b](https://github.com/jmlweb/tsnextstarter/commit/7db060b3b2f3a5b94d81ba972145c2a217d4d6ce))
+* separate cypress tests ([65c8164](https://github.com/jmlweb/tsnextstarter/commit/65c81642b2cbbf9b18a9e686c03fa2f46b0b6bfb))
+* setup-node action ([b5e934e](https://github.com/jmlweb/tsnextstarter/commit/b5e934e1b2cd2b6c0373173ad9a6130279724e14))
+
 ## [0.2.0](https://github.com/jmlweb/tsnextstarter/compare/v0.1.9...v0.2.0) (2022-07-29)
 
 
