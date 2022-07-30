@@ -1,20 +1,48 @@
-# TS Next Starter
+[![Stargazers](https://img.shields.io/github/stars/jmlweb/tsnextstarter.svg?style=for-the-badge)](https://github.com/jmlweb/tsnextstarter/stargazers)
+[![GitHub followers](https://img.shields.io/github/followers/jmlweb?style=for-the-badge)](https://github.com/jmlweb?tab=followers)
+[![License](https://img.shields.io/github/license/jmlweb/tsnextstarter.svg?style=for-the-badge)](https://github.com/jmlweb/tsnextstarter/blob/master/LICENSE.txt)
+[![GitHub last commit](https://img.shields.io/github/last-commit/jmlweb/tsnextstarter?style=for-the-badge)](https://github.com/jmlweb/tsnextstarter/commits/main)
+[![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/jmlweb/tsnextstarter?style=for-the-badge)](https://github.com/jmlweb/tsnextstarter/tags)
+[![GitHub Workflow Status: cicd](https://img.shields.io/github/workflow/status/jmlweb/tsnextstarter/cicd?label=CI/CD&style=for-the-badge)](https://github.com/jmlweb/tsnextstarter/actions/workflows/cicd.yml)
+[![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/josemanuel.lucas)
+[![Twitter](https://img.shields.io/badge/Twitter-%231DA1F2.svg?style=for-the-badge&logo=Twitter&logoColor=white)](https://twitter.com/jmlweb)
 
-![GitHub followers](https://img.shields.io/github/followers/jmlweb?style=social)
-![GitHub](https://img.shields.io/github/license/jmlweb/tsnextstarter)
-![GitHub Workflow Status: Testing](https://img.shields.io/github/workflow/status/jmlweb/tsnextstarter/Testing?label=testing)
-![GitHub Workflow Status: Linting](https://img.shields.io/github/workflow/status/jmlweb/tsnextstarter/Linting?label=linting)
-![GitHub last commit](https://img.shields.io/github/last-commit/jmlweb/tsnextstarter)
-![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/jmlweb/tsnextstarter)
-![GitHub Repo stars](https://img.shields.io/github/stars/jmlweb/tsnextstarter?style=social)
+<h1 align="center">TSNextStarter</h1>
 
-This is a template for a [Next.js](https://nextjs.org/) project based on [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<p align="center">
+  This is a template for a <a href="https://nextjs.org/">Next.js</a> project based on <a href="https://github.com/vercel/next.js/tree/canary/packages/create-next-app">create-next-app</a>
+  <br />
+  <a href="https://github.com/jmlweb/tsnextstarter/issues">Report Bug</a>
+  ·
+  <a href="https://github.com/jmlweb/tsnextstarter/issues">Request Feature</a>
+</p>
+
+<hr />
+
+## Quickstart
+
+```
+npx create-next-app -e https://github.com/jmlweb/tsnextstarter
+#or
+yarn create next-app -e https://github.com/jmlweb/tsnextstarter
+#or
+pnpm create next-app -e https://github.com/jmlweb/tsnextstarter
+```
 
 ## 🧠 Philosophy
 
 To be opinionated on the tools, but not on the code
 
 ### What's included
+
+[![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Jest](https://img.shields.io/badge/-jest-%23C21325?style=for-the-badge&logo=jest&logoColor=white)](https://jestjs.io/)
+[![Testing-Library](https://img.shields.io/badge/-TestingLibrary-%23E33332?style=for-the-badge&logo=testing-library&logoColor=white)](https://testing-library.com/)
+[![cypress](https://img.shields.io/badge/-cypress-%23E5E5E5?style=for-the-badge&logo=cypress&logoColor=058a5e)](https://www.cypress.io/)
+[![Storybook](https://img.shields.io/badge/-Storybook-FF4785?style=for-the-badge&logo=storybook&logoColor=white)](https://storybook.js.org/)
+[![ESLint](https://img.shields.io/badge/ESLint-4B3263?style=for-the-badge&logo=eslint&logoColor=white)](https://eslint.org/)
+[![GitHub Actions](https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white)](https://github.com/features/actions)
 
 - The basic Next.js template with [TypeScript](https://www.typescriptlang.org/) support
 - [Jest](https://jestjs.io/) and [Testing Library](https://testing-library.com/docs/react-testing-library/intro/) (provided by [@swc/jest](https://swc.rs/docs/usage/jest) for better performance)
