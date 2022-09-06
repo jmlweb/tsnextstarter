@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.32](https://github.com/jmlweb/tsnextstarter/compare/v0.2.31...v0.2.32) (2022-09-06)
+
 ### [0.2.31](https://github.com/jmlweb/tsnextstarter/compare/v0.2.30...v0.2.31) (2022-09-05)
 
 ### [0.2.30](https://github.com/jmlweb/tsnextstarter/compare/v0.2.29...v0.2.30) (2022-08-16)
