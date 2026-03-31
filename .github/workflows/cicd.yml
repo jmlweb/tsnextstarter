@@ -16,7 +16,7 @@ jobs:
           fetch-depth: 0
 
       - name: Use Node 16
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v6
         with:
           node-version: 16.x
           cache: yarn
@@ -39,7 +39,7 @@ jobs:
           fetch-depth: 0
 
       - name: Use Node 16
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v6
         with:
           node-version: 16.x
           cache: yarn
